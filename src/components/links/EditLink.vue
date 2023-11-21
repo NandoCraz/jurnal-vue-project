@@ -15,13 +15,13 @@
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="url" class="form-label">URL</label>
-                  <input type="text" class="form-control" id="url" v-model="link.link_url" />
+                  <input type="text" class="form-control" id="url" v-model="link.link_url" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="alias" class="form-label">Alias</label>
-                  <input type="text" class="form-control" id="alias" v-model="link.alias" />
+                  <input type="text" class="form-control" id="alias" v-model="link.alias" required />
                 </div>
               </div>
             </div>

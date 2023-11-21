@@ -15,55 +15,55 @@
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="headline" class="form-label">Headline</label>
-                  <input type="text" class="form-control" id="headline" v-model="jurnal.headline" />
+                  <input type="text" class="form-control" id="headline" v-model="jurnal.headline" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="lead_all" class="form-label">Lead All</label>
-                  <input type="text" class="form-control" id="lead_all" v-model="jurnal.lead_all" />
+                  <input type="text" class="form-control" id="lead_all" v-model="jurnal.lead_all" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="lead_why" class="form-label">Lead Why</label>
-                  <input type="text" class="form-control" id="lead_why" v-model="jurnal.lead_why" />
+                  <input type="text" class="form-control" id="lead_why" v-model="jurnal.lead_why" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="lead_what" class="form-label">Lead What</label>
-                  <input type="text" class="form-control" id="lead_what" v-model="jurnal.lead_what" />
+                  <input type="text" class="form-control" id="lead_what" v-model="jurnal.lead_what" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="lead_when" class="form-label">Lead When</label>
-                  <input type="text" class="form-control" id="lead_when" v-model="jurnal.lead_when" />
+                  <input type="text" class="form-control" id="lead_when" v-model="jurnal.lead_when" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="lead_where" class="form-label">Lead Where</label>
-                  <input type="text" class="form-control" id="lead_where" v-model="jurnal.lead_where" />
+                  <input type="text" class="form-control" id="lead_where" v-model="jurnal.lead_where" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="lead_who" class="form-label">Lead Who</label>
-                  <input type="text" class="form-control" id="lead_who" v-model="jurnal.lead_who" />
+                  <input type="text" class="form-control" id="lead_who" v-model="jurnal.lead_who" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="lead_how" class="form-label">Lead How</label>
-                  <input type="text" class="form-control" id="lead_how" v-model="jurnal.lead_how" />
+                  <input type="text" class="form-control" id="lead_how" v-model="jurnal.lead_how" required />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="closing" class="form-label">Closing</label>
-                  <input type="text" class="form-control" id="closing" v-model="jurnal.closing" />
+                  <input type="text" class="form-control" id="closing" v-model="jurnal.closing" required />
                 </div>
               </div>
               <div class="col-md-12">
