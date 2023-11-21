@@ -6,7 +6,7 @@
     <div class="d-flex align-items-center">
       <div class="row w-100">
         <div class="col-md-4 align-middle">
-          <select class="form-select" @change="onChange($event)">
+          <select class="form-select mb-3" @change="onChange($event)">
             <option :value="category.value" v-for="(category, index) in categories" :key="index">{{ category.name }}</option>
           </select>
         </div>

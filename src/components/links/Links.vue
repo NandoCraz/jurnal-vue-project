@@ -4,31 +4,33 @@
       <div class="card-header">Seluruh Link Jurnal</div>
       <div class="card-body">
         <router-link class="btn btn-success mb-5" to="/new-link">Tambah Link</router-link>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Alias</th>
-              <th scope="col">URL</th>
-              <th scope="col" class="text-center">Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="link in links" :key="link.id">
-              <td>{{ link.id }}</td>
-              <td>
-                {{ link.alias }}
-              </td>
-              <td>
-                {{ link.url.substring(0, 70) + "..." }}
-              </td>
-              <td class="text-center">
-                <router-link class="btn btn-sm btn-primary me-2" :to="{ name: 'Link Edit', params: { link_id: link.id } }">Edit</router-link>
-                <button class="btn btn-danger btn-sm" @click="deleteLink(link.id)">Hapus</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Alias</th>
+                <th scope="col">URL</th>
+                <th scope="col" class="text-center">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="link in links" :key="link.id">
+                <td>{{ link.id }}</td>
+                <td>
+                  {{ link.alias }}
+                </td>
+                <td>
+                  {{ link.url.substring(0, 70) + "..." }}
+                </td>
+                <td class="text-center">
+                  <router-link class="btn btn-sm btn-primary me-2" :to="{ name: 'Link Edit', params: { link_id: link.id } }">Edit</router-link>
+                  <button class="btn btn-danger btn-sm" @click="deleteLink(link.id)">Hapus</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

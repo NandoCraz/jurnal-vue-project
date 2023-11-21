@@ -4,26 +4,28 @@
       <div class="card-header">Seluruh Jurnal</div>
       <div class="card-body">
         <router-link class="btn btn-success mb-5" to="/new-jurnal">Tambah Jurnal</router-link>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Headline</th>
-              <th scope="col" class="text-center">Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="jurnal in jurnals" :key="jurnal.id">
-              <td>{{ jurnal.id }}</td>
-              <td>{{ jurnal.headline }}</td>
-              <td class="text-center">
-                <router-link class="btn btn-sm btn-primary me-2" :to="{ name: 'Jurnal Edit', params: { jurnal_id: jurnal.id } }">Edit</router-link>
-                <button class="btn btn-danger btn-sm me-2" @click="deleteJurnal(jurnal.id)">Hapus</button>
-                <router-link class="btn btn-sm btn-secondary" :to="{ name: 'Jurnal Detail', params: { jurnal_id: jurnal.id } }">Detail</router-link>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Headline</th>
+                <th scope="col" class="text-center">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="jurnal in jurnals" :key="jurnal.id">
+                <td>{{ jurnal.id }}</td>
+                <td>{{ jurnal.headline }}</td>
+                <td class="text-center">
+                  <router-link class="btn btn-sm btn-primary me-2" :to="{ name: 'Jurnal Edit', params: { jurnal_id: jurnal.id } }">Edit</router-link>
+                  <button class="btn btn-danger btn-sm me-2" @click="deleteJurnal(jurnal.id)">Hapus</button>
+                  <router-link class="btn btn-sm btn-secondary" :to="{ name: 'Jurnal Detail', params: { jurnal_id: jurnal.id } }">Detail</router-link>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
