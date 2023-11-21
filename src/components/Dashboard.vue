@@ -1,12 +1,12 @@
 <template>
   <div id="dashboard">
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-10 mb-5">
         <p class="text-muted fw-bold">Created At : {{ jurnal.created_at }}</p>
         <h1 class="mb-4 text-center">{{ jurnal.headline }}</h1>
         <div class="d-flex align-items-center">
           <div class="row w-100">
-            <div class="col-md-4 align-middle">
+            <div class="col-md-4 justify-content-center text-center">
               <select class="form-select mb-3" @change="onChange($event)">
                 <option :value="category.value" v-for="(category, index) in categories" :key="index">{{ category.name }}</option>
               </select>

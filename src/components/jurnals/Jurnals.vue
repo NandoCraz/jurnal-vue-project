@@ -75,17 +75,7 @@ export default {
             querySnapshot.forEach((doc) => {
               doc.ref.delete().then(() => {
                 alert("Jurnal berhasil dihapus!");
-                this.$router.push({ name: "Jurnals" });
-                db.collection("jurnals")
-                  .orderBy("jurnal_id", "desc")
-                  .limit(1)
-                  .get()
-                  .then((querySnapshot) => {
-                    querySnapshot.forEach((doc) => {
-                      this.jurnal = doc.data();
-                      this.lead = this.jurnal.lead_all;
-                    });
-                  });
+                this.$router.push({ name: "Dashboard" });
               });
             });
           });
