@@ -69,9 +69,18 @@ export default {
           .get()
           .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-              doc.ref.delete();
-              alert("Link berhasil dihapus!");
-              this.$router.push({ name: "Dashboard" });
+              doc.ref.delete().then(() => {
+                alert("Link berhasil dihapus!");
+                this.$router.push({ name: "Dashboard" });
+                db.collection("links")
+                  .orderBy("link_id", "desc")
+                  .get()
+                  .then((querySnapshot) => {
+                    querySnapshot.forEach((doc) => {
+                      this.links.push(doc.data());
+                    });
+                  });
+              });
             });
           });
       }
